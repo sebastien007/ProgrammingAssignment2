@@ -1,4 +1,4 @@
-cacheSolve <- function(x, ...) {
+acheSolve <- function(x, ...) {
   ## x: output of makeCacheMatrix()
   ## return: inverse of the original matrix input to myCacheMatrix()
   
@@ -6,12 +6,12 @@ cacheSolve <- function(x, ...) {
   
   # if the inverse has already been calculated
   if (!is.null(inv)){
-    # get it from the cache and skips the computation. 
+    ## get result of inverse matrix , ignore if allreasy caculated 
     message("getting cached data")
     return(inv)
   }
   
-  # otherwise, calculates the inverse 
+  ## calculate matrix in other case
   mat.data = x$get()
   inv = solve(mat.data, ...)
   
